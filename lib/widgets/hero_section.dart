@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tracking_diary/l10n/app_localizations.dart';
 
 class HeroSection extends StatelessWidget {
   static const _olive = Color(0xFF5C5200);
@@ -40,7 +41,7 @@ class HeroSection extends StatelessWidget {
  
         // Subtitle
         Text(
-          '당신의 글자를 이어나가세요.',
+          AppLocalizations.of(context)?.mainTitle ?? 'Continue your writing journey.',
           style: TextStyle(
             fontSize: 15,
             color: _textMuted,

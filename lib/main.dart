@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tracking_diary/l10n/app_localizations.dart';
 import 'package:tracking_diary/pages/login.dart';
 
 void main() {
@@ -15,8 +16,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Georgia',
-        colorScheme: .fromSeed(seedColor: Colors.yellowAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellowAccent),
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      locale: const Locale('en'),
+       supportedLocales: const [
+        Locale('en'),
+        Locale('ko'),
+      ],
       home: const LoginPage(),
     );
   }

@@ -1,0 +1,22 @@
+{
+  "trackFolio": "Track Folio",
+  "@trackFolio": {},
+  "mainTitle": "Track your daily activities and habits with ease.",
+  "@mainTitle": {},
+  "welcome": "Welcome, Writer.",
+  "@welcome": {},
+  "signIn": "SIGN IN",
+  "@signIn": {},
+  "emailAddress": "EMAIL ADDRESS",
+  "@emailAddress": {},
+  "orUseEmail": "OR USE EMAIL",
+  "@orUseEmail": {},
+  "continueWithGoogle": "Continue with Google",
+  "@continueWithGoogle": {},
+  "newHere": "New here? Create your studio space in seconds.",
+  "@newHere": {},
+  "joinUs": "Join Us",
+  "@joinUs": {},
+  "exampleEmail":"lemon@example.com",
+  "@exampleEmail": {}
+}

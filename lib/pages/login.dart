@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tracking_diary/l10n/app_localizations.dart';
 import 'package:tracking_diary/widgets/google_button.dart';
 import 'package:tracking_diary/widgets/hero_section.dart';
 
@@ -89,10 +90,10 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Center(
+                        Center(
                           child: Text(
-                            'Welcome Back',
-                            style: TextStyle(
+                            AppLocalizations.of(context)?.welcome ?? 'Welcome',
+                            style: const TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF2C2800),
@@ -116,7 +117,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 12),
                               child: Text(
-                                'OR USE EMAIL',
+                                AppLocalizations.of(context)?.orUseEmail ?? 'OR USE EMAIL',
                                 style: TextStyle(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w600,
@@ -134,7 +135,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
  
                         // Email Field
                         Text(
-                          'EMAIL ADDRESS',
+                          AppLocalizations.of(context)?.emailAddress ?? 'Email Address',
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
@@ -194,9 +195,9 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                                 borderRadius: BorderRadius.circular(14),
                               ),
                             ),
-                            child: const Text(
-                              'Sign In',
-                              style: TextStyle(
+                            child: Text(
+                              AppLocalizations.of(context)?.signIn ?? 'SING IN',
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 letterSpacing: 0.2,
@@ -212,7 +213,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
  
                   // ── Footer ────────────────────────────────────────────
                   Text(
-                    '처음 오셨나요? 몇 초 만에 스튜디오 공간을 만들어보세요.',
+                    AppLocalizations.of(context)?.newHere ?? 'New here? Create your studio space in seconds.',
                     style: TextStyle(
                       fontSize: 13,
                       color: _textMuted,
@@ -230,9 +231,9 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                       minimumSize: Size.zero,
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
-                    child: const Text(
-                      'Request an Invitation',
-                      style: TextStyle(
+                    child: Text(
+                      AppLocalizations.of(context)?.joinUs ?? 'JOIN US',
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.1,
