@@ -12,6 +12,9 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   font_awesome_flutter: ^10.7.0
+  supabase_flutter: ^2.0.0
+  flutter_dotenv: ^5.1.0
+
 
   flutter_localizations:
     sdk: flutter
@@ -26,6 +29,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  essets:
+    - .env
 
 flutter_gen:
   l10n:
