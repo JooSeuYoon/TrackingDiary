@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tracking_diary/l10n/app_localizations.dart';
 import 'package:tracking_diary/widgets/google_button.dart';
 import 'package:tracking_diary/widgets/hero_section.dart';
+import 'package:tracking_diary/pages/signup.dart';
 
 class LoginPage extends StatefulWidget{
   const LoginPage({super.key});
@@ -223,7 +224,10 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                   const SizedBox(height: 10),
                   TextButton(
                     onPressed: () {
-                      // TODO: navigate to signup / invitation
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SignUpPage()),
+                      );
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: _oliveDark,

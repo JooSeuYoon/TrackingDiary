@@ -146,7 +146,7 @@ abstract class AppLocalizations {
   /// No description provided for @joinUs.
   ///
   /// In en, this message translates to:
-  /// **'Join Us'**
+  /// **'JOIN US'**
   String get joinUs;
 
   /// No description provided for @exampleEmail.
@@ -154,6 +154,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'lemon@example.com'**
   String get exampleEmail;
+
+  /// No description provided for @createAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get createAccount;
+
+  /// No description provided for @createTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Start your journey with us.'**
+  String get createTitle;
+
+  /// No description provided for @userName.
+  ///
+  /// In en, this message translates to:
+  /// **'USERNAME'**
+  String get userName;
+
+  /// No description provided for @exampleUserName.
+  ///
+  /// In en, this message translates to:
+  /// **'Lemon Kim'**
+  String get exampleUserName;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'PASSWORD'**
+  String get password;
+
+  /// No description provided for @passwordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Must be at least 8 characters.'**
+  String get passwordHint;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alreadyHaveAccount;
+
+  /// No description provided for @loginIn.
+  ///
+  /// In en, this message translates to:
+  /// **'LOGIN'**
+  String get loginIn;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

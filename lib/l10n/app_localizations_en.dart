@@ -33,8 +33,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get newHere => 'New here? Create your studio space in seconds.';
 
   @override
-  String get joinUs => 'Join Us';
+  String get joinUs => 'JOIN US';
 
   @override
   String get exampleEmail => 'lemon@example.com';
+
+  @override
+  String get createAccount => 'Create Account';
+
+  @override
+  String get createTitle => 'Start your journey with us.';
+
+  @override
+  String get userName => 'USERNAME';
+
+  @override
+  String get exampleUserName => 'Lemon Kim';
+
+  @override
+  String get password => 'PASSWORD';
+
+  @override
+  String get passwordHint => 'Must be at least 8 characters.';
+
+  @override
+  String get alreadyHaveAccount => 'Already have an account?';
+
+  @override
+  String get loginIn => 'LOGIN';
 }

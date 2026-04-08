@@ -37,4 +37,28 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get exampleEmail => 'lemon@gmail.com';
+
+  @override
+  String get createAccount => '계정 만들기';
+
+  @override
+  String get createTitle => '우리와 함께하는 여정을 시작하세요.';
+
+  @override
+  String get userName => '사용자 이름';
+
+  @override
+  String get exampleUserName => '김레몬';
+
+  @override
+  String get password => '비밀번호';
+
+  @override
+  String get passwordHint => '최소 8자 이상이어야 합니다.';
+
+  @override
+  String get alreadyHaveAccount => '이미 저희와 함께하고 계십니까?';
+
+  @override
+  String get loginIn => '로그인';
 }

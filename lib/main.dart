@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellowAccent),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      locale: const Locale('en'),
+      locale: const Locale('ko'),
        supportedLocales: const [
         Locale('en'),
         Locale('ko'),
