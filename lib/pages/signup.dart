@@ -253,7 +253,7 @@ class _SignUpPageState extends State<SignUpPage>
                             color: Color(0xFF2C2800),
                           ),
                           decoration: InputDecoration(
-                            hintText: AppLocalizations.of(context)?.passwordHint ?? '6자 이상',
+                            hintText: AppLocalizations.of(context)?.passwordHint ?? '8자 이상',
                             hintStyle: TextStyle(
                               color: _textMuted.withOpacity(0.6),
                               fontSize: 15,

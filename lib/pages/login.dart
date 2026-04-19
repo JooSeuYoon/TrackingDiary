@@ -13,6 +13,8 @@ class LoginPage extends StatefulWidget{
 
 class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixin {
   final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  bool _obscurePassword = true;
   late AnimationController _animController;
   late Animation<double> _fadeAnim;
   late Animation<Offset> _slideAnim;
@@ -61,16 +63,23 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
           child: SlideTransition(
             position: _slideAnim,
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: MediaQuery.of(context).size.height - 
+                      MediaQuery.of(context).padding.top -
+                      MediaQuery.of(context).padding.bottom,
+                ),
+                child: IntrinsicHeight(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
                   const SizedBox(height: 16),
  
                   // ── Hero Section ──────────────────────────────────────
                   HeroSection(),
  
-                  const SizedBox(height: 48),
+                  const SizedBox(height: 32),
  
                   // ── Login Card ────────────────────────────────────────
                   Container(
@@ -179,7 +188,64 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                         ),
  
                         const SizedBox(height: 20),
+                        // Password Field
+                        Text(
+                          AppLocalizations.of(context)?.password ?? 'Password',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                            color: _textMuted,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        TextField(
+                          controller: _passwordController,
+                          obscureText: _obscurePassword,
+                          style: const TextStyle(
+                            fontSize: 15,
+                            color: Color(0xFF2C2800),
+                          ),
+                          decoration: InputDecoration(
+                            hintText: '••••••••',
+                            hintStyle: TextStyle(
+                              color: _textMuted.withOpacity(0.6),
+                              fontSize: 15,
+                            ),
+                            filled: true,
+                            fillColor: _bg,
+                            contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 16),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              borderSide: BorderSide.none,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              borderSide: BorderSide.none,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              borderSide: BorderSide(
+                                  color: _olive.withOpacity(0.5),
+                                  width: 1.5),
+                            ),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscurePassword
+                                    ? Icons.visibility_off_outlined
+                                    : Icons.visibility_outlined,
+                                color: _textMuted,
+                                size: 20,
+                              ),
+                              onPressed: () => setState(() =>
+                                  _obscurePassword = !_obscurePassword),
+                            ),
+                          ),
+                        ),
  
+                        const SizedBox(height: 20),
+
                         // Sign In Button
                         SizedBox(
                           width: double.infinity,
@@ -250,6 +316,8 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
               ),
             ),
           ),
+        ),
+      ),
         ),
       ),
     );
