@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tracking_diary/l10n/app_localizations.dart';
 
 class GoogleButton extends StatelessWidget {
+  const GoogleButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

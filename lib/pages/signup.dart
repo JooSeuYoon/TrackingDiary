@@ -316,9 +316,9 @@ class _SignUpPageState extends State<SignUpPage>
                                       strokeWidth: 2,
                                     ),
                                   )
-                                : const Text(
-                                    'Create Account',
-                                    style: TextStyle(
+                                : Text(
+                                    AppLocalizations.of(context)?.createAccount ?? 'Create Account',
+                                    style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,
                                     ),

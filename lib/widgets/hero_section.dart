@@ -4,6 +4,8 @@ import 'package:tracking_diary/l10n/app_localizations.dart';
 class HeroSection extends StatelessWidget {
   static const _olive = Color(0xFF5C5200);
   static const _textMuted = Color(0xFF888070);
+
+  const HeroSection({super.key});
  
   @override
   Widget build(BuildContext context) {
